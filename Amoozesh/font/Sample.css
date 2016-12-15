@@ -1,0 +1,17 @@
+/*WebYekanFont*/
+@font-face
+{
+  font-family:'YJ';
+src: url('Yekan.eot?#') format('eot'),  /* IE6–8 */
+     url('Yekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('Yekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+/*WebYekanNumberFont*/
+@font-face
+{
+  font-family:'NYJ';
+src: url('yekannumbers.eot?#') format('eot'),  /* IE6–8 */
+     url('yekannumbers.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('yekannumbers.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
