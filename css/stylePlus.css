@@ -1,0 +1,20 @@
+body {
+  /*background-color: red;*/
+}
+
+.img {
+  background-image: url('../img/e.png');
+  height: 500px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /*background-color: red;*/
+}
+
+.rtlPart {
+  direction: rtl;
+}
+
+input[type="radio"] {
+  position: relative !important;
+  margin-left: 0 !important;
+}

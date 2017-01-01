@@ -42,10 +42,19 @@ if (empty($_SESSION['id'])) {
 
     <!-- Custom CSS -->
     <style>
-        body {
-            padding-top: 70px;
-            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        }
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+    @media screen and (min-width: 480px) {
+      body {
+        background-image: url('./img/hands.jpg');
+        background-size: 100%;
+        background-position: 0px -100px;
+        background-repeat: no-repeat;
+      }
+    }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
