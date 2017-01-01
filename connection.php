@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "";
+$username = "root";
 $password = "";
-$db_name="";
+$db_name="somayehf_sami";
 
 
 // Create connection

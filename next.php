@@ -72,7 +72,7 @@
                     <p dir="rtl"><b>شما این صفحه را مشاهده کرده اید، به صفحه بعد منتقل می شوید.</b></p>
                 </div>
                 <?php
-                print($_SESSION['previous']);
+//                print($_SESSION['previous']);
                     header( "refresh:5;url=$_SESSION[next]" );
                 ?>
             </div>
