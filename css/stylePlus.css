@@ -10,6 +10,14 @@ body {
   /*background-color: red;*/
 }
 
+.img2 {
+  background-image: url('../img/a.jpg');
+  height: 500px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /*background-color: red;*/
+}
+
 .rtlPart {
   direction: rtl;
 }

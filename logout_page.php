@@ -35,6 +35,15 @@ unset($_SESSION['id']);
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+
+    @media screen and (min-width: 480px) {
+      body {
+        background-image: url('./img/thankYou.jpg');
+        background-size: 100%;
+        /*background-position: 0px 100px;*/
+        background-repeat: no-repeat;
+      }
+    }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,7 +68,7 @@ unset($_SESSION['id']);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -77,13 +86,14 @@ unset($_SESSION['id']);
         <div class="row">
             <div class="col-lg-12 text-center" >
                 <div class="container" >
-                    <p dir="rtl" style="text-align: justify;">دانشجوی گرامی</p>
+                    <p dir="rtl">دانشجوی گرامی</p>
 
-                <p dir="rtl" style="text-align: justify;">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
+                <p dir="rtl">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
 
-                <p dir="rtl" style="text-align: justify;">موفق باشید</p>
+                <p dir="rtl">موفق باشید</p>
                 </div>
-                
+                <!-- <img src="./img/thankYou.jpgs" alt=""> -->
+
             </div>
         </div>
         <!-- /.row -->

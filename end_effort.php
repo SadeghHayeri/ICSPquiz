@@ -46,7 +46,7 @@ if (empty($_SESSION['id'])) {
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/stylePlus.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
@@ -119,7 +119,9 @@ if (empty($_SESSION['id'])) {
 
 
     <div class="row">
-        <div class="col-lg-12 text-center">
+      <div class="col-lg-7 img2">
+      </div>
+      <div class="col-lg-5 rtlPart">
             <p dir="rtl" style="text-align: justify;">دانشجوی گرامی</p>
 
             <p dir="rtl" style="text-align: justify;">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
