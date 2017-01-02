@@ -125,7 +125,53 @@ body {
     margin-top: 50px;
 }
 
-.progree {
-    width: 100px
+.progress {
+    width: 100px;
     height: 100px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    border-radius: 100px;
+    background-position: center;
+    border: 1px solid #666;
+}
+
+.p0 {
+  background-image: url('./img/0.png');
+}
+.p25 {
+  background-image: url('./img/25.png');
+}
+.p50 {
+  background-image: url('./img/50.png');
+}
+.p75 {
+  background-image: url('./img/75.png');
+}
+.p100 {
+  background-image: url('./img/100.png');
+}
+
+.nextPage {
+  background-color: rgb(50, 50, 50);
+  float: left;
+  clear: both;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all .4s;
+}
+
+.nextPage:hover {
+  background-color: rgb(23, 23, 23);
+}
+
+.btnGreen {
+  background-color: rgb(2, 131, 34);
+}
+
+.btnGreen:hover {
+  background-color: rgb(0, 159, 40);
 }

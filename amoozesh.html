@@ -69,7 +69,7 @@ if (empty($_SESSION['id'])) {
             </li>
 
             <li id="Ans">
-                تحلیل سوالات ابتدای کلاس آنلاین
+                آزمون و تحلیل سوالات
             </li>
 
 
@@ -86,7 +86,7 @@ if (empty($_SESSION['id'])) {
                     <div class="progress p0"></div>
                     <p>
                     <p style="font-weight: bold;">پوینتر (یا اشاره‌گر) ‪چیست؟‬</p>
-                        
+
                         پوینر آدرسی از مموری است که در آن object (مانند متغیرها و ...) قرار دارد‪.‬ با استفاده از پوینترها می‌توان به طور غیرمستقیم به این objectها دسترسی پیدا کرد.
                         در زبان C آرگومان‌های توابع ‪"‬passed by value‪"‬ هستند یعنی کپی از مقدار هر یک از آرگومان ها با فراخوانی شدن تابع در push ،run‪-‬time stack می‌شود. بنابراین هر تغییری که در حین اجرای تابع روی متغیرهای ورودی رخ دهد با بازگشت از تابع و پاک شدن بخش‌هایی از run‪-‬time stack که مربوط به تابع فراخوانده شده است از بین خواهد رفت.
                         مثال از نحوه‌ی استفاده از پوینتر در زبان C:
@@ -127,8 +127,12 @@ void Swap (int firstVal, int secondVal)
 }
                     </pre>
                     <img src="img/Screen Shot 2016-12-14 at 7.15.57 PM.png" style="float: right; padding-top: 50px;" alt="">
+
+                    <div class="nextPage" id="p1">مبحث بعدی</div>
                 </li>
                 <li>
+                  <div class="progress p25"></div>
+
 
                     <p>
                     <p style="font-weight: bold;">اپراتور پوینترها :</p>
@@ -179,11 +183,11 @@ void NewSwap (int *firstVal, int *secondVal)
                             <img src="img/Screen Shot 2016-12-14 at 7.16.25 PM.png" alt="">
                         </div>
                     </div>
- 
+                    <div class="nextPage" id="p2">مبحث بعدی</div>
                 </li>
                 <li>
-                </li>
-                <li>
+                  <div class="progress p50"></div>
+
                     <p>
                     <h4>null pointer :</h4>
                     پاره‌ای از موارد لازم است پوینتر ما به هیچی یا همان null‪ ‬ اشاره کند که در ساختمان داده‌های dynamic  کاربرد‌ دارد.(linked list ها که در آینده با آن‌ها بیشتر آشنا خواهید از جمله‌ کاربرد آن‌ می‌باشد)
@@ -208,8 +212,11 @@ void NewSwap (int *firstVal, int *secondVal)
                         چگونه می‌توان از پوینترها در برگرداندن مقادیر متغیرها بهره برد؟
                         از return value برای ارزیابی عملکرد تابع خود استفاده کنید
                     </p>
+                    <div class="nextPage" id="p3">مبحث بعدی</div>
                 </li>
                 <li>
+                  <div class="progress p75"></div>
+
                     <p>
                     <p style="font-weight: bold;">تعریف</p>
                         آرایه لیستی از داده‌هاست که پشت سر هم در مموری قرار دارند. برای دسترسی به داده‌ی خاصی از آرایه باید به اولین خانه ایندکس ۰ بدهیم و به ازای هر عضو یک واحد به آن اضافه کنیم.
@@ -222,12 +229,15 @@ void NewSwap (int *firstVal, int *secondVal)
                         <pre style="direction: ltr;text-align: left;">base pointer of an array is array_name[0]</pre>
 
                     </p>
+                    <div class="nextPage" id="p4">محبث بعد</div>
                 </li>
                 <li>
+                  <div class="progress p100"></div>
+
                     <p>
 
                     <p style="font-weight: bold">ماکروها چیستند و فایده‌ی آن‌ها چیست؟</p>
-                        
+
                         ماکروها همان مقادیر ثابتی هستند که معمولا در ابتدای فایل برنامه (قبل از main) وجود دارند و به طور معمول با حروف بزرگ نمایش داده می‌شوند syntax آن به صورت زیر است:
                     <pre style="direction: ltr;text-align: left;"><span style="font-size: 23px">#</span>define MACRO 5</pre>
                     با کامپایل شدن کد، کامپایلر به جای تمامی MACRO های موجود در کد مقدار آن را قرار می‌دهد.
@@ -255,7 +265,8 @@ array_name = &array_name[0];
                         <br>
                     </p>
 
-
+                    <div class="nextPage" id="p5">تحلیل سوالات</div>
+                </li>
                 <li>
                     <p>مقدار هر یک اجرای قطعه کد بالا خواهیم مقدار هر یک از متغیرها به صورت زیر خواهد بود.
 </p>
@@ -294,6 +305,7 @@ char ** list = {"An", "exam", "on", "Halloween", "night!!!!"};
 
 قسمت پنج : فایل استاندارد شامل تمام هدرفایل های (کتابخانه‌های) استاندارد می‌باشد.
 مانند stdio، stdlib و ... </p>
+                  <a href="./quiz/1-q1.php"><div class="nextPage btnGreen" id="p6">آزمون</div></a>
                 </li>
             </ul>
         </div>
@@ -315,29 +327,67 @@ char ** list = {"An", "exam", "on", "Halloween", "night!!!!"};
                 //     $('.c' + activeIndex).addClass('active');
                 // });
 
+                $('.nextPage').click( function() {
+                  $('html, body').animate({
+                    scrollTop: 0
+                  }, 1000);
+                })
+
                 $('#poDef').click(function () {
                     slider.data('unslider').animate(0)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
                 });
+
                 $('#poOp').click(function () {
                     slider.data('unslider').animate(1)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
                 });
-                $('#poRef').click(function () {
+                $('#p1').click(function () {
+                    slider.data('unslider').animate(1)
+                });
+
+                $('#poNul').click(function () {
+                    slider.data('unslider').animate(2)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
+                });
+                $('#p2').click(function () {
                     slider.data('unslider').animate(2)
                 });
-                $('#poNul').click(function () {
+
+                $('#ArDef').click(function () {
+                    slider.data('unslider').animate(3)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
+                });
+                $('#p3').click(function () {
                     slider.data('unslider').animate(3)
                 });
-                $('#poSyn').click(function () {
-                    slider.data('unslider').animate(4)
-                });
-                $('#ArDef').click(function () {
-                    slider.data('unslider').animate(4)
-                });
+
                 $('#Macro').click(function () {
-                    slider.data('unslider').animate(5)
+                    slider.data('unslider').animate(4)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
                 });
+                $('#p4').click(function () {
+                    slider.data('unslider').animate(4)
+                });
+
                 $('#Ans').click(function () {
-                    slider.data('unslider').animate(6)
+                    slider.data('unslider').animate(5)
+                    $('html, body').animate({
+                      scrollTop: 0
+                    }, 1000);
+                });
+                $('#p5').click(function () {
+                    slider.data('unslider').animate(5)
                 });
 
 
