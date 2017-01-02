@@ -117,3 +117,15 @@ body {
 .my-slider ul li p {
     white-space: pre-line;
 }
+
+.nullImg {
+    margin: 0px auto;
+    display: block;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.progree {
+    width: 100px
+    height: 100px;
+}

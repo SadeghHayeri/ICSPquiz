@@ -52,23 +52,19 @@ if (empty($_SESSION['id'])) {
         <ul>
 
             <li>
-                Pointer
+                اشاره‌گر
                 <ul>
-                    <li id="poDef">definition</li>
-                    <li id="poOp">pointer operator</li>
-                    <li id="poRef">pass by refrence</li>
-                    <li id="poNul">Null pointer</li>
-                    <li id="poSyn">Syntax of pointers</li>
+                    <li id="poDef">تعریف</li>
+                    <li id="poOp">عملگر اشاره‌گر و رفرنس</li>
+                    <li id="poNul">اشاره‌گر به Null</li>
                 </ul>
             </li>
 
             <li>
-                Array
+                آرایه‌ها
                 <ul>
-                    <li id="ArDef">definition</li>
-                    <li id="Macro">Macro</li>
-                    <li id="ArPar">parameter</li>
-                    <li id="String">String</li>
+                    <li id="ArDef">تعریف</li>
+                    <li id="Macro">ماکرو‌ها و پارامتر‌ها</li>
                 </ul>
             </li>
 
@@ -87,8 +83,10 @@ if (empty($_SESSION['id'])) {
             <ul>
 
                 <li>
+                    <div class="progress p0"></div>
                     <p>
-                        پوینتر (یا اشاره‌گر) ‪چیست؟‬
+                    <p style="font-weight: bold;">پوینتر (یا اشاره‌گر) ‪چیست؟‬</p>
+                        
                         پوینر آدرسی از مموری است که در آن object (مانند متغیرها و ...) قرار دارد‪.‬ با استفاده از پوینترها می‌توان به طور غیرمستقیم به این objectها دسترسی پیدا کرد.
                         در زبان C آرگومان‌های توابع ‪"‬passed by value‪"‬ هستند یعنی کپی از مقدار هر یک از آرگومان ها با فراخوانی شدن تابع در push ،run‪-‬time stack می‌شود. بنابراین هر تغییری که در حین اجرای تابع روی متغیرهای ورودی رخ دهد با بازگشت از تابع و پاک شدن بخش‌هایی از run‪-‬time stack که مربوط به تابع فراخوانده شده است از بین خواهد رفت.
                         مثال از نحوه‌ی استفاده از پوینتر در زبان C:
@@ -131,8 +129,9 @@ void Swap (int firstVal, int secondVal)
                     <img src="img/Screen Shot 2016-12-14 at 7.15.57 PM.png" style="float: right; padding-top: 50px;" alt="">
                 </li>
                 <li>
+
                     <p>
-                    اپراتور پوینترها :
+                    <p style="font-weight: bold;">اپراتور پوینترها :</p>
                     ۱‫.‬ address operator‪ یا "&"‬  :
                     که آدرس حافظه‌ی عملوند خود را مشخص می‌کند
                     ۲‫.‬indirection operator یا deference operator یا  ‪"‬*‪"‬ :
@@ -140,10 +139,11 @@ void Swap (int firstVal, int secondVal)
                     یعنی در قطعه کد بالا ‪*‬ptr و object معادل هستند. به طور مثال داریم :
                     *ptr = *ptr +1 معادل است با object = object + 1
                     </p>
-                </li>
-                <li>
+
+                    <br>
                     <p>
-                    "pass by refrence" حال که در مورد پوینتر ها اطلاعات لازم را به دست آوردید سعی کنید که مفهوم را استنتاج کنید
+                    <p style="font-weight: bold;">pass by refrence</p>
+                    حال که در مورد پوینتر ها اطلاعات لازم را به دست آوردید سعی کنید که مفهوم را استنتاج کنید
 
                     وقتی آرگومان‌های توابع پوینتر باشند مقداری که به run‪-‬time stack افزوده می‌شود برابر با آدرس خانه‌ای از حافظه است که مقدار متغیر در آن قرار دارد پس با جابه‌جا کردن مقادیری که پوینترها به آن اشاره می‌کنند مقدار متغیرها در حافظه تغییر می‌یابند.
                     شرط لازم برای اینکه  ‪"‬pass by refrence‪"‬ برای آرگومان‌های یک تابع مفهوم داشته باشد این است که آرگومان‌ها یا باید متغیر باشند و یا memory object باشند (یعنی باید آدرس داشته باشند)
@@ -179,6 +179,9 @@ void NewSwap (int *firstVal, int *secondVal)
                             <img src="img/Screen Shot 2016-12-14 at 7.16.25 PM.png" alt="">
                         </div>
                     </div>
+ 
+                </li>
+                <li>
                 </li>
                 <li>
                     <p>
@@ -189,8 +192,12 @@ void NewSwap (int *firstVal, int *secondVal)
                         <pre style="direction: ltr;text-align: left;"> scanf("%d",input);</pre>
                         با استفاده از دستور scanf از کاربر مقدار ورودی گرفته می‌شود ولی به جای اینکه این مقدار را در متغیر input قرار دهد آن را در خانه ای که آدرس آن محتوای متغیر input است ورودی را قرار می دهد که این مقدار توسط کامپایلر به طور رندوم  هنگام allocate کردن متغیر به آن مقداردهی شده است. این مقدار ممکن است خارج از دسترس برنامه، غیرقابل نوشتن باشد و یا ...
                         بنابراین تا زمان اجرا نمی تونیم پیشبینی کنیم چه اتفاقی دقیقا می‌افتد و ممکن است برنامه crash کند.
-                </li>
-                <li>
+
+
+
+                    <img src="./img/null.jpg" class="nullImg">
+
+                    <br><br>
                     <h4>پاره‌ای از توضیحات درمورد pointer‪'‬s syntax</h4>
                     <p>
                     <pre style="direction: ltr;text-align: left;">type *ptr;</pre><p>
@@ -204,6 +211,7 @@ void NewSwap (int *firstVal, int *secondVal)
                 </li>
                 <li>
                     <p>
+                    <p style="font-weight: bold;">تعریف</p>
                         آرایه لیستی از داده‌هاست که پشت سر هم در مموری قرار دارند. برای دسترسی به داده‌ی خاصی از آرایه باید به اولین خانه ایندکس ۰ بدهیم و به ازای هر عضو یک واحد به آن اضافه کنیم.
                         جنس تمامی اعضای آرایه‌ها یکسان می‌باشد که در هنگام تعریف کردن مشخص می‌شود.
                         نحوه ‌ی تعریف آرایه‌ها :
@@ -218,17 +226,17 @@ void NewSwap (int *firstVal, int *secondVal)
                 <li>
                     <p>
 
-                        ماکروها چیستند و فایده‌ی آن‌ها چیست؟
+                    <p style="font-weight: bold">ماکروها چیستند و فایده‌ی آن‌ها چیست؟</p>
+                        
                         ماکروها همان مقادیر ثابتی هستند که معمولا در ابتدای فایل برنامه (قبل از main) وجود دارند و به طور معمول با حروف بزرگ نمایش داده می‌شوند syntax آن به صورت زیر است:
                     <pre style="direction: ltr;text-align: left;"><span style="font-size: 23px">#</span>define MACRO 5</pre>
                     با کامپایل شدن کد، کامپایلر به جای تمامی MACRO های موجود در کد مقدار آن را قرار می‌دهد.
                     اگر از ماکروها در کد استفاده نکنیم و مقدار آن‌ها را مستقیما استفاده کنیم با تغییر مقدار تعیین شده باید در تمامی موارد استفاده شده مقدار عوض شود اما با استفاده از ماکرو کافی است مقدار در تعریف ماکرو آپدیت شود و کد را دوباره کامپایل کنیم.
                     </p>
-                </li>
-                <li>
-                    <p>
 
-                        آرایه‌ها و پارامترها
+                                        <p>
+                                        <br>
+                    <p style="font-weight: bold">آرایه‌ها و پارامترها</p>
                         همان طور که متغیرها می‌توانستند آرگومان ورودی توابع باشند آرایه‌ها نیز این قابلیت را دارند، اگر طول آرایه ای که آرگومان ورودی تابع است زیاد باشد کپی کردن آن در استک ممکن است زمان زیادی در execution time را به خود اختصاص دهد بنابراین بهتر است که با refrence این کار صورت بگیرد. در برنامه‌های C آرایه‌ها به طور دیفالت by refrence به توابع پاس داده می‌شوند همان‌طور که در مثال مشاهده می‌کنید syntax فرستادن آرایه‌ ای که آرگومان یک تابع است به طور معمول خود با ‪[‬ ‪]‬ نمی باشد. در زبان C اسم آرایه معادل با رفرنس (آدرس خانه‌ی حافظه‌ای که در آن قرار دارد) به عنصر base آن می‌باشد یعنی داریم:
 <pre style="direction: ltr;text-align: left;"  >
 type array_name[SIZE];
@@ -239,14 +247,14 @@ array_name = &array_name[0];
                         حال چگونه تنها یک عنصر آرایه را با value و یا با refrence به تابع پاس دهیم؟
 
                     </p>
-                </li>
-                <li>
-                    <p style="clear: right;">
+
+                    <br>
+                    <p style="font-weight: bold">رشته ها</p>
+                    <p style="clear: right; white-space: nowrap !important">
                         در زبان string ،C مجموعه‌ای از کاراکترهاست که بین ‪"‬ ‪"‬ قرار می‌گیرد کامپایلر به انتهای آن کاراکتر ‪'\0' ‬ را اضافه می‌کند و در آرایه‌ای از جنس char آن را ذخیره می‌کند، پس در آرایه‌ای به سایز n حداکثر طول string که می‌تواند در آن ذخیره شود برابر است با n‪-‬1 .
                         <br>
                     </p>
 
-                </li>
 
                 <li>
                     <p>مقدار هر یک اجرای قطعه کد بالا خواهیم مقدار هر یک از متغیرها به صورت زیر خواهد بود.
@@ -323,21 +331,15 @@ char ** list = {"An", "exam", "on", "Halloween", "night!!!!"};
                     slider.data('unslider').animate(4)
                 });
                 $('#ArDef').click(function () {
+                    slider.data('unslider').animate(4)
+                });
+                $('#Macro').click(function () {
                     slider.data('unslider').animate(5)
                 });
-                $('#ArPar').click(function () {
-                    slider.data('unslider').animate(7)
-                });
-
-                $('#Macro').click(function () {
+                $('#Ans').click(function () {
                     slider.data('unslider').animate(6)
                 });
-                $('#String').click(function () {
-                    slider.data('unslider').animate(8)
-                });
-                $('#Ans').click(function () {
-                    slider.data('unslider').animate(9)
-                });
+
 
             });
         </script>
