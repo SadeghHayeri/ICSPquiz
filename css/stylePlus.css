@@ -26,3 +26,11 @@ input[type="radio"] {
   position: relative !important;
   margin-left: 0 !important;
 }
+
+.welcomeImg {
+  width: 500px;
+  margin: 0px auto;
+  clear: both;
+  display: block;
+  margin-top: 100px;
+}

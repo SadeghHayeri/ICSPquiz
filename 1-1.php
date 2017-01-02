@@ -104,8 +104,10 @@ if (empty($_SESSION['id'])) {
 
 
             </div>
-            <a href= <?php echo $_SESSION['next']; ?>
-               class="btn btn-info" role="button">شروع درس</a>
+
+            <img src="img/welcome.jpg" alt="">
+
+            <a href= <?php echo $_SESSION['next']; ?> class="btn btn-info" role="button">شروع درس</a>
 
         </div>
     </div>
