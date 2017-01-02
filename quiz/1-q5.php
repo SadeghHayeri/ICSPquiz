@@ -55,7 +55,7 @@ if (empty($_SESSION['id'])) {
     <title>CECM94</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -114,7 +114,7 @@ if (empty($_SESSION['id'])) {
 
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
-        } else if ($res == "1") {
+        } else if ($res == "2") {
             $sql = "UPDATE questions SET answer=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             $_SESSION['ans'] = 1;
@@ -150,28 +150,28 @@ if (empty($_SESSION['id'])) {
     ?>
     <div class="row">
         <div class="col-lg-12 text-center">
-            <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>کدام مورد در رابطه با فایل استاندارد صحیح میباشد؟</p>
+          <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
+          <img src="img/5.png" alt="">
+          <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
             <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">فایلی است که توابع کتابخانه‌ای header را دارا می باشد</label>
+                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">2, 3</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">فایلی است که تنها شامل تعاریف و ماکروهاست</label>
+                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">2, 0</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">فایلی است که توابع تعریف شده توسط کابر را شامل می‌باشد</label>
+                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">2, Garbage value</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">فایلی که دایرکتوری کنونی (دایرکتوری برنامه) را نشان می‌دهد</label>
+                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">0, 0</label>
                 </div>
-                <input type="submit" class="btn btn-info" name="ans" value="ارسال">
-                <a href="1-h5.php" class="btn btn-info" role="button"> پاسخ</a>
-                <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a>
+                <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
+                <!-- <a href="1-h5.php" class="btn btn-info" role="button"> پاسخ</a> -->
+                <!-- <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
             </form>
 
-            <p dir="rtl" style="text-align: justify;">توجه: در صورت نیاز به راهنمایی دکمه &quot;راهنمایی&quot; را انتخاب
-                کنید. در صورت دانستن پاسخ سوال، گزینه مورد نظر را انتخاب و دکمه &quot;ارسال&quot; را انتخاب نمایید.</p>
 
         </div>
     </div>
@@ -181,10 +181,10 @@ if (empty($_SESSION['id'])) {
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
-<script src="js/jquery.js"></script>
+<script src="../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 

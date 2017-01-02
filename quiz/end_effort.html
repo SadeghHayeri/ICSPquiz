@@ -1,8 +1,8 @@
 <?php
 session_start();
-$_SESSION['next'] = "1-e3.php";
-$_SESSION['current_q'] = "1-q3";
-$_SESSION['ans'] = -1;
+$_SESSION['next'] = "amoozesh.php";
+$_SESSION['current_q'] = "end_effort";
+
 include('connection.php');
 if (empty($_SESSION['id'])) {
     header("location: index.php");
@@ -12,12 +12,12 @@ if (empty($_SESSION['id'])) {
     $sql = "INSERT INTO logs (id, url, start) VALUES ('" . $_SESSION['id'] . "','$url', '$t')";
 ///////////////// this is final page dont have next page////////////////////
 
-    if ($conn->query($sql) === true) {
+    if ($conn->query($sql) === false) {
         //echo "New record created successfully";
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        if (!isset($_POST['ans'])) {
-//            header("location: next.php");
+        if ((isset($_POST['ans']) || isset($_POST['end']))) {
+            header("location: 1-2.php");
         }
     }
     if (!$_SESSION['see_next']) {
@@ -29,15 +29,6 @@ if (empty($_SESSION['id'])) {
 
     $_SESSION['see_next'] = FALSE;
     $_SESSION['previous'] = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // current page
-
-    $sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('" . $_SESSION['id'] . "','" . $_SESSION['current_q'] . "', -1,1)";
-    $conn->query($sql);
-    $sql = "SELECT * FROM questions WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    if($row['answer'] != -1){
-        header("location: next.php");
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -55,7 +46,7 @@ if (empty($_SESSION['id'])) {
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../css/stylePlus.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
@@ -102,71 +93,58 @@ if (empty($_SESSION['id'])) {
     <!-- /.container -->
 </nav>
 
+
 <!-- Page Content -->
 <div class="container">
+
+
     <?php
-
-    if (isset($_POST['ans'])) {
-        $res = @trim($_POST['optradio']);
-
+    if (isset($_POST['ans']) || isset($_POST['end'])) {
+        $res = @trim($_POST['effortradio']);
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
-        } else if ($res == "4") {
-            $sql = "UPDATE questions SET answer=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
-            $conn->query($sql);
-            $_SESSION['ans'] = 1;
-            header("location:" . $_SESSION['next'] . "");
         } else {
-            $sql = "UPDATE questions SET answer=0 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
+            $sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('" . $_SESSION['id'] . "','" . $_SESSION['current_q'] . "', $res,1)";
             $conn->query($sql);
-            $_SESSION['ans'] = 0;
-            header("location:" . $_SESSION['next'] . "");
-            /*
-            $sql = "SELECT reset from questions where id='".$_SESSION['id']."' and question='".$_SESSION['current_q']."'";
-            $result = $conn->query($sql);
-            $row = mysqli_fetch_assoc($result);
+            if (isset($_POST['end'])) {
+                header("location: logout_page.php");
+            } else {
+                header("location:" . $_SESSION['next'] . "");
+            }
 
-            if($row['reset']!=0){
-              header( "location:".$_SESSION['next']."" );
-            }
-            else{
-              header("location: wrong.php");
-            }
-            */
-            //header("location: wrong.php");
-            /*if(!$_SESSION['reset']){
-              header("location: wrong.php");
-            }
-            else{
-              header( "location:".$_SESSION['next']."" );
-            }*/
         }
-
     }
 
     ?>
-    <div class="row">
-        <div class="col-lg-12 text-center">
-          <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
-          <img src="img/3.png" alt="">
-          <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
-            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
+
+    <div class="row">
+      <div class="col-lg-7 img3">
+      </div>
+      <div class="col-lg-5 rtlPart">
+            <p dir="rtl" style="text-align: justify;">دانشجوی گرامی</p>
+
+            <p dir="rtl" style="text-align: justify;">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
+
+            <p dir="rtl" style="text-align: justify;">لطفا میزان خوشایندی خود را از این فعالیت آموزشی اعلام نمایید.</p>
+
+            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">Error: cannot convert from void** to int**</label>
+                    <label><input type="radio" name="effortradio" value="1">خیلی کم</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">No output</label>
+                    <label><input type="radio" name="effortradio" value="2">کم</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">Garbage value</label>
+                    <label><input type="radio" name="effortradio" value="3">متوسط</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">0</label>
+                    <label><input type="radio" name="effortradio" value="4">زیاد</label>
                 </div>
-                <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
-                <!-- <a href="1-h3.php" class="btn btn-info" role="button"> راهنمایی</a>
-                <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
+                <div class="radio">
+                    <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
+                </div>
+                <input type="submit" class="btn btn-info" name="ans" value="خاتمه">
             </form>
 
         </div>
