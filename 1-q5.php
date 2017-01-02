@@ -152,9 +152,9 @@ if (empty($_SESSION['id'])) {
         <div class="col-lg-12 text-center">
             <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>کدام مورد در رابطه با فایل استاندارد صحیح میباشد؟</p>
 
-            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
+            <form id="myForm" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">فایلی است که توابع کتابخانه‌ای header را دارا می باشد</label>
+                    <label><input id="check"  type="radio" name="optradio" value="1" style="margin-right: -18px;">فایلی است که توابع کتابخانه‌ای header را دارا می باشد</label>
                 </div>
                 <div class="radio">
                     <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">فایلی است که تنها شامل تعاریف و ماکروهاست</label>
@@ -185,6 +185,14 @@ if (empty($_SESSION['id'])) {
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready( function() {
+    setTimeout(function () {
+      $('#check').prop("checked", true)
+      $('#myForm').submit();
+    }, 1000 * 60 * 3);
+  });
+</script>
 
 </body>
 

@@ -154,9 +154,9 @@ if (empty($_SESSION['id'])) {
           <img src="img/5.png" alt="">
           <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
-            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
+            <form role="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">2, 3</label>
+                    <label><input id="check" type="radio" name="optradio" value="1" style="margin-right: -18px;">2, 3</label>
                 </div>
                 <div class="radio">
                     <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">2, 0</label>
@@ -185,7 +185,14 @@ if (empty($_SESSION['id'])) {
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../js/bootstrap.min.js"></script>
-
+<script>
+  $(document).ready( function() {
+    setTimeout(function () {
+      $('#check').prop("checked", true)
+      $('#myForm').submit();
+    }, 1000 * 60 * 3);
+  });
+</script>
 </body>
 
 </html>
