@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ace4f1-2050-4292-b8c7-0afdfbe13f1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1-h1.php" afterPath="$PROJECT_DIR$/1-h1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1-h2.php" afterPath="$PROJECT_DIR$/1-h2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1-h3.php" afterPath="$PROJECT_DIR$/1-h3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1-h4.php" afterPath="$PROJECT_DIR$/1-h4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1-h5.php" afterPath="$PROJECT_DIR$/1-h5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quiz/2-e1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quiz/2-e2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quiz/2-e3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quiz/2-e4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quiz/2-e5.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/amoozesh.html" afterPath="$PROJECT_DIR$/amoozesh.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/1-q1.php" afterPath="$PROJECT_DIR$/quiz/2-q1.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/1-q2.php" afterPath="$PROJECT_DIR$/quiz/2-q2.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/1-q3.php" afterPath="$PROJECT_DIR$/quiz/2-q3.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/1-q4.php" afterPath="$PROJECT_DIR$/quiz/2-q4.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/1-q5.php" afterPath="$PROJECT_DIR$/quiz/2-q5.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/img/1.png" afterPath="$PROJECT_DIR$/img/1-extra.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/img/2.png" afterPath="$PROJECT_DIR$/img/2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/img/3.png" afterPath="$PROJECT_DIR$/img/3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/img/4.png" afterPath="$PROJECT_DIR$/img/4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quiz/img/5.png" afterPath="$PROJECT_DIR$/img/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,51 +32,148 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="1-h1.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1-h1.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="2-q1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/2-q1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="69">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding>
-                <marker date="1483296153502" expanded="true" signature="232:300" ph="INSERT INTO logs... " />
-                <marker date="1483296153502" expanded="true" signature="571:679" ph="UPDATE quest... " />
-                <marker date="1483296153502" expanded="true" signature="742:837" ph="DELETE FROM " />
-                <marker date="1483296153502" expanded="true" signature="1732:1739" ph="{...}" />
-                <marker date="1483296153502" expanded="true" signature="1928:2128" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2147:5563" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2239:3198" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2267:3166" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2375:2761" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2455:2745" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2920:3120" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2960:3105" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="2981:3087" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3246:5384" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3292:3776" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3362:3482" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3393:3424" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3490:3770" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3511:3628" ph="UPDATE quest... " />
-                <marker date="1483296153502" expanded="true" signature="3808:5357" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3852:5346" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="3888:5331" ph="..." />
-                <marker date="1483296153502" expanded="false" signature="3926:3946" ph="..." />
-                <marker date="1483296153502" expanded="false" signature="4055:4075" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4076:4170" ph="..." />
-                <marker date="1483296153502" expanded="false" signature="4209:4229" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4394:5312" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4434:4555" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4595:4711" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4751:4870" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="4910:5028" ph="..." />
-                <marker date="1483296153502" expanded="true" signature="5068:5191" ph="..." />
+                <marker date="1483720392719" expanded="true" signature="380:461" ph="INSERT INTO logs... " />
+                <marker date="1483720392719" expanded="true" signature="833:933" ph="UPDATE logs " />
+                <marker date="1483720392719" expanded="true" signature="1124:1249" ph="INSERT INTO questions... " />
+                <marker date="1483720392719" expanded="true" signature="1288:1392" ph="SELECT * fro... questions" />
+                <marker date="1483720392719" expanded="true" signature="3816:3847" ph="..." />
+                <marker date="1483720392719" expanded="true" signature="4092:4202" ph="UPDATE quest... " />
+                <marker date="1483720392719" expanded="true" signature="4507:4617" ph="UPDATE quest... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="2-q2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/2-q2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding>
+                <marker date="1483720616071" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+                <marker date="1483720616071" expanded="true" signature="864:964" ph="UPDATE logs " />
+                <marker date="1483720616071" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+                <marker date="1483720616071" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+                <marker date="1483720616071" expanded="true" signature="3846:3877" ph="..." />
+                <marker date="1483720616071" expanded="true" signature="3981:4091" ph="UPDATE quest... " />
+                <marker date="1483720616071" expanded="true" signature="4255:4365" ph="UPDATE quest... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2-q3.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/2-q3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="182" column="13" lean-forward="false" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+              <folding>
+                <marker date="1483720616207" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+                <marker date="1483720616207" expanded="true" signature="864:964" ph="UPDATE logs " />
+                <marker date="1483720616207" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+                <marker date="1483720616207" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+                <marker date="1483720616207" expanded="true" signature="3844:3875" ph="..." />
+                <marker date="1483720616207" expanded="true" signature="3979:4089" ph="UPDATE quest... " />
+                <marker date="1483720616207" expanded="true" signature="4253:4363" ph="UPDATE quest... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2-q4.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/2-q4.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="185" column="13" lean-forward="false" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
+              <folding>
+                <marker date="1483720616151" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+                <marker date="1483720616151" expanded="true" signature="864:964" ph="UPDATE logs " />
+                <marker date="1483720616151" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+                <marker date="1483720616151" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+                <marker date="1483720616151" expanded="true" signature="3846:3877" ph="..." />
+                <marker date="1483720616151" expanded="true" signature="3981:4091" ph="UPDATE quest... " />
+                <marker date="1483720616151" expanded="true" signature="4255:4365" ph="UPDATE quest... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2-q5.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz/2-q5.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="186" column="13" lean-forward="false" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+              <folding>
+                <marker date="1483720616175" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+                <marker date="1483720616175" expanded="true" signature="865:965" ph="UPDATE logs " />
+                <marker date="1483720616175" expanded="true" signature="1156:1281" ph="INSERT INTO questions... " />
+                <marker date="1483720616175" expanded="true" signature="1320:1424" ph="SELECT * FRO... questions" />
+                <marker date="1483720616175" expanded="true" signature="3847:3878" ph="..." />
+                <marker date="1483720616175" expanded="true" signature="3982:4092" ph="UPDATE quest... " />
+                <marker date="1483720616175" expanded="true" signature="4256:4366" ph="UPDATE quest... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2-e1.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quiz/2-e1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <folding>
+                <marker date="1483720616119" expanded="true" signature="268:336" ph="INSERT INTO logs... " />
+                <marker date="1483720616119" expanded="true" signature="3084:3115" ph="..." />
+                <marker date="1483720616119" expanded="true" signature="3202:3316" ph="UPDATE quest... " />
+                <marker date="1483720616119" expanded="true" signature="3951:3969" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1-extra.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/1-extra.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/4.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>آزم</find>
+      <find>1.png</find>
+      <find>../</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,6 +182,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/1-h1.php" />
+        <option value="$PROJECT_DIR$/amoozesh.html" />
+        <option value="$PROJECT_DIR$/amoozesh.php" />
+        <option value="$PROJECT_DIR$/quiz/1-q1.php" />
+        <option value="$PROJECT_DIR$/quiz/2-q2.php" />
+        <option value="$PROJECT_DIR$/quiz/2-q3.php" />
+        <option value="$PROJECT_DIR$/quiz/2-q4.php" />
+        <option value="$PROJECT_DIR$/quiz/2-q5.php" />
+        <option value="$PROJECT_DIR$/quiz/2-e1.php" />
       </list>
     </option>
   </component>
@@ -84,9 +201,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -103,7 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,9 +234,37 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quiz" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,6 +273,11 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -157,6 +308,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -191,31 +348,32 @@
       <option name="presentableId" value="Default" />
       <updated>1483295030311</updated>
       <workItem from="1483295034713" duration="942000" />
+      <workItem from="1483718959403" duration="1652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="942000" />
+    <option name="totallyTimeSpent" value="2594000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2371476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -233,41 +391,164 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1-h1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483296153502" expanded="true" signature="232:300" ph="INSERT INTO logs... " />
-            <marker date="1483296153502" expanded="true" signature="571:679" ph="UPDATE quest... " />
-            <marker date="1483296153502" expanded="true" signature="742:837" ph="DELETE FROM " />
-            <marker date="1483296153502" expanded="true" signature="1732:1739" ph="{...}" />
-            <marker date="1483296153502" expanded="true" signature="1928:2128" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2147:5563" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2239:3198" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2267:3166" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2375:2761" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2455:2745" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2920:3120" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2960:3105" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="2981:3087" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3246:5384" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3292:3776" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3362:3482" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3393:3424" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3490:3770" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3511:3628" ph="UPDATE quest... " />
-            <marker date="1483296153502" expanded="true" signature="3808:5357" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3852:5346" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="3888:5331" ph="..." />
-            <marker date="1483296153502" expanded="false" signature="3926:3946" ph="..." />
-            <marker date="1483296153502" expanded="false" signature="4055:4075" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4076:4170" ph="..." />
-            <marker date="1483296153502" expanded="false" signature="4209:4229" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4394:5312" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4434:4555" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4595:4711" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4751:4870" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="4910:5028" ph="..." />
-            <marker date="1483296153502" expanded="true" signature="5068:5191" ph="..." />
+            <marker date="1483717405547" expanded="true" signature="232:300" ph="INSERT INTO logs... " />
+            <marker date="1483717405547" expanded="true" signature="571:679" ph="UPDATE quest... " />
+            <marker date="1483717405547" expanded="true" signature="742:837" ph="DELETE FROM " />
+            <marker date="1483717405547" expanded="true" signature="3393:3424" ph="..." />
+            <marker date="1483717405547" expanded="true" signature="3511:3628" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1-h1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <marker date="1483717405547" expanded="true" signature="232:300" ph="INSERT INTO logs... " />
+            <marker date="1483717405547" expanded="true" signature="571:679" ph="UPDATE quest... " />
+            <marker date="1483717405547" expanded="true" signature="742:837" ph="DELETE FROM " />
+            <marker date="1483717405547" expanded="true" signature="3393:3424" ph="..." />
+            <marker date="1483717405547" expanded="true" signature="3511:3628" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amoozesh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2484">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <marker date="1483719493875" expanded="true" signature="288:369" ph="INSERT INTO logs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/1-extra.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-q1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <marker date="1483720392719" expanded="true" signature="380:461" ph="INSERT INTO logs... " />
+            <marker date="1483720392719" expanded="true" signature="833:933" ph="UPDATE logs " />
+            <marker date="1483720392719" expanded="true" signature="1124:1249" ph="INSERT INTO questions... " />
+            <marker date="1483720392719" expanded="true" signature="1288:1392" ph="SELECT * fro... questions" />
+            <marker date="1483720392719" expanded="true" signature="3816:3847" ph="..." />
+            <marker date="1483720392719" expanded="true" signature="4092:4202" ph="UPDATE quest... " />
+            <marker date="1483720392719" expanded="true" signature="4507:4617" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-q2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <marker date="1483720616071" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+            <marker date="1483720616071" expanded="true" signature="864:964" ph="UPDATE logs " />
+            <marker date="1483720616071" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+            <marker date="1483720616071" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+            <marker date="1483720616071" expanded="true" signature="3846:3877" ph="..." />
+            <marker date="1483720616071" expanded="true" signature="3981:4091" ph="UPDATE quest... " />
+            <marker date="1483720616071" expanded="true" signature="4255:4365" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-q3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="182" column="13" lean-forward="false" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+          <folding>
+            <marker date="1483720616207" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+            <marker date="1483720616207" expanded="true" signature="864:964" ph="UPDATE logs " />
+            <marker date="1483720616207" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+            <marker date="1483720616207" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+            <marker date="1483720616207" expanded="true" signature="3844:3875" ph="..." />
+            <marker date="1483720616207" expanded="true" signature="3979:4089" ph="UPDATE quest... " />
+            <marker date="1483720616207" expanded="true" signature="4253:4363" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-q4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="185" column="13" lean-forward="false" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
+          <folding>
+            <marker date="1483720616151" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+            <marker date="1483720616151" expanded="true" signature="864:964" ph="UPDATE logs " />
+            <marker date="1483720616151" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
+            <marker date="1483720616151" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
+            <marker date="1483720616151" expanded="true" signature="3846:3877" ph="..." />
+            <marker date="1483720616151" expanded="true" signature="3981:4091" ph="UPDATE quest... " />
+            <marker date="1483720616151" expanded="true" signature="4255:4365" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-q5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="186" column="13" lean-forward="false" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+          <folding>
+            <marker date="1483720616175" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
+            <marker date="1483720616175" expanded="true" signature="865:965" ph="UPDATE logs " />
+            <marker date="1483720616175" expanded="true" signature="1156:1281" ph="INSERT INTO questions... " />
+            <marker date="1483720616175" expanded="true" signature="1320:1424" ph="SELECT * FRO... questions" />
+            <marker date="1483720616175" expanded="true" signature="3847:3878" ph="..." />
+            <marker date="1483720616175" expanded="true" signature="3982:4092" ph="UPDATE quest... " />
+            <marker date="1483720616175" expanded="true" signature="4256:4366" ph="UPDATE quest... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/2-e1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <marker date="1483720616119" expanded="true" signature="268:336" ph="INSERT INTO logs... " />
+            <marker date="1483720616119" expanded="true" signature="3084:3115" ph="..." />
+            <marker date="1483720616119" expanded="true" signature="3202:3316" ph="UPDATE quest... " />
+            <marker date="1483720616119" expanded="true" signature="3951:3969" ph="..." />
           </folding>
         </state>
       </provider>
