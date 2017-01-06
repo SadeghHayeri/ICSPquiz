@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ace4f1-2050-4292-b8c7-0afdfbe13f1e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/thank-you-preview-o-jpg-1380125719-hPxcWP-clipart.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amoozesh.php" afterPath="$PROJECT_DIR$/amoozesh.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logout_page.php" afterPath="$PROJECT_DIR$/logout_page.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,7 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="636">
@@ -149,19 +149,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2-q2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2-q2.php">
+      <file leaf-file-name="logout_page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/logout_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="125" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+            <state relative-caret-position="438">
+              <caret line="40" column="86" lean-forward="false" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
               <folding>
-                <marker date="1483723309403" expanded="true" signature="334:415" ph="INSERT INTO logs... " />
-                <marker date="1483723309403" expanded="true" signature="864:964" ph="UPDATE logs " />
-                <marker date="1483723309403" expanded="true" signature="1155:1280" ph="INSERT INTO questions... " />
-                <marker date="1483723309403" expanded="true" signature="1319:1423" ph="SELECT * FRO... questions" />
-                <marker date="1483723309403" expanded="true" signature="3846:3877" ph="..." />
-                <marker date="1483723309403" expanded="true" signature="3981:4091" ph="UPDATE quest... " />
-                <marker date="1483723309403" expanded="true" signature="4255:4365" ph="UPDATE quest... " />
+                <marker date="1483726571915" expanded="true" signature="58:148" ph="UPDATE users... " />
               </folding>
             </state>
           </provider>
@@ -231,6 +225,7 @@
         <option value="$PROJECT_DIR$/2-e5.php" />
         <option value="$PROJECT_DIR$/amoozesh.php" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/logout_page.php" />
       </list>
     </option>
   </component>
@@ -271,6 +266,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICSPquiz" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +376,7 @@
       <updated>1483295030311</updated>
       <workItem from="1483295034713" duration="942000" />
       <workItem from="1483718959403" duration="2240000" />
-      <workItem from="1483721443870" duration="4742000" />
+      <workItem from="1483721443870" duration="5130000" />
     </task>
     <task id="LOCAL-00001" summary="amoozesh has been changed to php file from html +&#10;quiz folder is going to be moved into root directory">
       <created>1483720674559</created>
@@ -390,21 +399,28 @@
       <option name="project" value="LOCAL" />
       <updated>1483725131996</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="project is ready and auto registration has been fixed">
+      <created>1483726259041</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1483726259041</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7924000" />
+    <option name="totallyTimeSpent" value="8312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23991156" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23991156" sideWeight="0.50417536" order="2" side_tool="true" content_ui="tabs" />
@@ -447,7 +463,8 @@
     <MESSAGE value="amoozesh has been changed to php file from html +&#10;quiz folder is going to be moved into root directory" />
     <MESSAGE value="second quiz has been added" />
     <MESSAGE value="all questions in second exam has been modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="all questions in second exam has been modified" />
+    <MESSAGE value="project is ready and auto registration has been fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="project is ready and auto registration has been fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -919,6 +936,16 @@
             <marker date="1483726179919" expanded="true" signature="655:718" ph="SELECT * fro... users" />
             <marker date="1483726179919" expanded="true" signature="1224:1375" ph="INSERT INTO users... " />
             <marker date="1483726179919" expanded="true" signature="1431:1494" ph="SELECT * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="40" column="86" lean-forward="false" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+          <folding>
+            <marker date="1483726571915" expanded="true" signature="58:148" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>

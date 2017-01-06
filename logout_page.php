@@ -38,7 +38,7 @@ unset($_SESSION['id']);
 
     @media screen and (min-width: 480px) {
       body {
-        background-image: url('./img/thankYou.jpg');
+        background-image: url('./img/thank-you-preview-o-jpg-1380125719-hPxcWP-clipart.jpg');
         background-size: 100%;
         /*background-position: 0px 100px;*/
         background-repeat: no-repeat;
