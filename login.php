@@ -22,7 +22,10 @@ if (!empty($_POST)) {
             $_SESSION['id'] = $row['ID'];
             header("location: 1-1.php"); // Redirecting To Other Page
         } else {
-            $sql = "INSERT INTO users (mail, username, student_number, leave_first) VALUES ('$mail', '$username', '$studentNumber', 'http://localhost/sami/end_effort.php')";
+            $_SESSION['error_login'] = "Username or Email or StudentNumber is invalid";
+            header("location: index.php");
+
+            /*$sql = "INSERT INTO users (mail, username, student_number, leave_first) VALUES ('$mail', '$username', '$studentNumber', 'http://localhost/sami/end_effort.php')";
             $conn->query($sql);
 
             $sql = "SELECT * from users where mail='$mail' AND username='$username'";
@@ -32,8 +35,7 @@ if (!empty($_POST)) {
             $_SESSION['username'] = $username; // Initializing Session
             $_SESSION['id'] = $row['ID'];
 
-//            $_SESSION['error_login'] = "Username or Email or StudentNumber is invalid";
-            header("location: 1-1.php");
+            header("location: 1-1.php");*/
         }
     }
 }
