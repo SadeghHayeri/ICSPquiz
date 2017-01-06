@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['next'] = "amoozesh.php";
-$_SESSION['current_q'] = "end_effort";
+$_SESSION['next'] = "logout_page.php";
+$_SESSION['current_q'] = "end_effort_2";
 
 include('connection.php');
 if (empty($_SESSION['id'])) {
@@ -115,6 +115,9 @@ if (empty($_SESSION['id'])) {
         }
     }
 
+    $sql = "SELECT * from questions where id=".$_SESSION['id']." AND answer='1' AND question LIKE '2%'";
+    $result = $conn->query($sql);
+    $rows = mysqli_num_rows($result);
     ?>
 
 
@@ -123,6 +126,8 @@ if (empty($_SESSION['id'])) {
       </div>
       <div class="col-lg-5 rtlPart">
             <p dir="rtl" style="text-align: justify;">دانشجوی گرامی</p>
+
+            <p dir="rtl" style="text-align: justify;">نمره ی کسب شده از آزمون: <?php echo "5 / ".$rows ; ?></p>
 
             <p dir="rtl" style="text-align: justify;">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
 
@@ -144,7 +149,7 @@ if (empty($_SESSION['id'])) {
                 <div class="radio">
                     <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
                 </div>
-                <input type="submit" class="btn btn-info" name="ans" value="خاتمه">
+                <input type="submit" class="btn btn-info" name="ans" value="خاتمه آزمون">
             </form>
 
         </div>
@@ -155,10 +160,10 @@ if (empty($_SESSION['id'])) {
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
-<script src="../js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 

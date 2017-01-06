@@ -115,7 +115,7 @@ if (empty($_SESSION['id'])) {
         }
     }
 
-    $sql = "SELECT * from questions where id=".$_SESSION['id']." AND answer='1'";
+    $sql = "SELECT * from questions where id=".$_SESSION['id']." AND answer='1' AND question LIKE '1%'";
     $result = $conn->query($sql);
     $rows = mysqli_num_rows($result);
     ?>

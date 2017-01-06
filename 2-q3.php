@@ -165,7 +165,7 @@ if (empty($_SESSION['id'])) {
                     <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">0</label>
                 </div>
                 <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
-                <a href="1-h3.php" class="btn btn-info" role="button"> راهنمایی</a>
+                <a href="2-h3.php" class="btn btn-info" role="button"> راهنمایی</a>
                 <!-- <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
             </form>
 

@@ -115,7 +115,7 @@ if (empty($_SESSION['id'])) {
       <div class="col-lg-5 rtlPart">
             <div class="container">
                 <?php
-                if ($_SESSION['ans'] == 1) {
+                if ($_SESSION['ans'] == 4) {
                     print("پاسخ شما صحیح است.");
                 } else {
                     //print("پاسخ شما نادرست است.");

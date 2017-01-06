@@ -166,7 +166,7 @@ if (empty($_SESSION['id'])) {
                     <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">فایلی که دایرکتوری کنونی (دایرکتوری برنامه) را نشان می‌دهد</label>
                 </div>
                 <input type="submit" class="btn btn-info" name="ans" value="ارسال">
-                <a href="1-h5.php" class="btn btn-info" role="button"> پاسخ</a>
+                <a href="1-h5.php" class="btn btn-info" role="button">راهنمایی </a>
                 <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a>
             </form>
 
