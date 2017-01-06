@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['next'] = "1-e3.php";
-$_SESSION['current_q'] = "1-q3";
+$_SESSION['next'] = "2-e3.php";
+$_SESSION['current_q'] = "2-q3";
 $_SESSION['ans'] = -1;
 include('connection.php');
 if (empty($_SESSION['id'])) {
@@ -54,7 +54,7 @@ if (empty($_SESSION['id'])) {
     <title>CECM94</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -177,10 +177,10 @@ if (empty($_SESSION['id'])) {
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
-<script src="../js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
   $(document).ready( function() {
     setTimeout(function () {
