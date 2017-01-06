@@ -18,6 +18,7 @@ if (empty($_SESSION['id'])) {
         }
     }
 
+// test
     if (empty($_SESSION['current_q'])) {
         print("مسیر نا درست");
     }
