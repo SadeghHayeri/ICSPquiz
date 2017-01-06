@@ -4,11 +4,11 @@ include('connection.php');
 if (empty($_SESSION['id'])) {
     header("location: index.php");
 } else {
-    $_SESSION['next'] = "1-q5.php";
+    $_SESSION['next'] = "2-q2.php";
 ///////////////////////
     $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $sql = "INSERT INTO logs (id, url) VALUES ('" . $_SESSION['id'] . "','$url')";
-
+//print($sql);
     if ($conn->query($sql) === true) {
         //echo "New record created successfully";
     } else {
@@ -39,6 +39,8 @@ if (empty($_SESSION['id'])) {
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylePlus.css" rel="stylesheet">
+
+
     <!-- Custom CSS -->
     <style>
         body {
@@ -85,9 +87,9 @@ if (empty($_SESSION['id'])) {
     <!-- /.container -->
 </nav>
 
+
 <!-- Page Content -->
 <div class="container">
-
     <?php
     if (isset($_POST['ans']) || isset($_POST['end'])) {
         $res = @trim($_POST['effortradio']);
@@ -106,6 +108,7 @@ if (empty($_SESSION['id'])) {
     }
 
     ?>
+
 
     <div class="row">
       <div class="col-lg-7 img">
@@ -138,7 +141,7 @@ if (empty($_SESSION['id'])) {
                         <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
                     </div>
                     <input type="submit" class="btn btn-info" name="ans" value="سوال بعد">
-                    <input type="submit" class="btn btn-info" name="end" value="خاتمه آزمون">
+<!--                    <input type="submit" class="btn btn-info" name="end" value="خاتمه آزمون">-->
                 </form>
             </div>
         </div>

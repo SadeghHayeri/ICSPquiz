@@ -1,34 +1,26 @@
 <?php
 session_start();
-$_SESSION['next'] = "amoozesh.php";
-$_SESSION['current_q'] = "end_effort";
-
 include('connection.php');
 if (empty($_SESSION['id'])) {
     header("location: index.php");
 } else {
+    $_SESSION['next'] = "end_effort_2.php";
+///////////////////////
     $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    $t = date('Y-m-d H:i:s', time());
-    $sql = "INSERT INTO logs (id, url, start) VALUES ('" . $_SESSION['id'] . "','$url', '$t')";
-///////////////// this is final page dont have next page////////////////////
+    $sql = "INSERT INTO logs (id, url) VALUES ('" . $_SESSION['id'] . "','$url')";
 
-    if ($conn->query($sql) === false) {
+    if ($conn->query($sql) === true) {
         //echo "New record created successfully";
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        if ((isset($_POST['ans']) || isset($_POST['end']))) {
-            header("location: 1-2.php");
+        if (!(isset($_POST['ans']) || isset($_POST['end']))) {
+            header("location: end_effort.php");
         }
     }
-    if (!$_SESSION['see_next']) {
-        $t1 = time();
-        $t2 = date('Y-m-d H:i:s', $t1);
-        $sql = "UPDATE logs SET end='$t2' WHERE id='" . $_SESSION['id'] . "' and url='" . $_SESSION['previous'] . "'";
-        $conn->query($sql);
-    }
 
-    $_SESSION['see_next'] = FALSE;
-    $_SESSION['previous'] = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // current page
+    if (empty($_SESSION['current_q'])) {
+        print("مسیر نا درست");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -97,17 +89,16 @@ if (empty($_SESSION['id'])) {
 <!-- Page Content -->
 <div class="container">
 
-
     <?php
     if (isset($_POST['ans']) || isset($_POST['end'])) {
         $res = @trim($_POST['effortradio']);
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
         } else {
-            $sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('" . $_SESSION['id'] . "','" . $_SESSION['current_q'] . "', $res,1)";
+            $sql = "UPDATE questions SET effort=$res  WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             if (isset($_POST['end'])) {
-                header("location: logout_page.php");
+                header("location: end_effort.php");
             } else {
                 header("location:" . $_SESSION['next'] . "");
             }
@@ -115,43 +106,41 @@ if (empty($_SESSION['id'])) {
         }
     }
 
-    $sql = "SELECT * from questions where id=".$_SESSION['id']." AND answer='1'";
-    $result = $conn->query($sql);
-    $rows = mysqli_num_rows($result);
     ?>
 
-
     <div class="row">
-      <div class="col-lg-7 img2">
+      <div class="col-lg-7 img">
       </div>
       <div class="col-lg-5 rtlPart">
-            <p dir="rtl" style="text-align: justify;">دانشجوی گرامی</p>
-
-            <p dir="rtl" style="text-align: justify;">نمره ی کسب شده از آزمون: <?php echo "5 / ".$rows ; ?></p>
-
-            <p dir="rtl" style="text-align: justify;">با تشکر از شرکت شما در کلاس یادگیری آنلاین</p>
-
-            <p dir="rtl" style="text-align: justify;">لطفا میزان خوشایندی خود را از این فعالیت آموزشی اعلام نمایید.</p>
-
-            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <div class="radio">
-                    <label><input type="radio" name="effortradio" value="1">خیلی کم</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="effortradio" value="2">کم</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="effortradio" value="3">متوسط</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="effortradio" value="4">زیاد</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
-                </div>
-                <input type="submit" class="btn btn-info" name="ans" value="ورود به بخش آموزش">
-            </form>
-
+            <div class="container">
+                <?php
+                if ($_SESSION['ans'] == 1) {
+                    print("پاسخ شما صحیح است.");
+                } else {
+                    //print("پاسخ شما نادرست است.");
+                    echo '<span dir="rtl" style="text-align: right;">پاسخ شما نادرست است.</span>';
+                }
+                ?>
+                <p dir="rtl" style="text-align: justify;">برای پاسخگویی به این سوال چه میزان تلاش نموده اید</p>
+                <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <div class="radio">
+                        <label><input type="radio" name="effortradio" value="1">خیلی کم</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="effortradio" value="2">کم</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="effortradio" value="3">متوسط</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="effortradio" value="4">زیاد</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
+                    </div>
+                    <input type="submit" class="btn btn-info" name="ans" value="ارزیابی">
+                </form>
+            </div>
         </div>
     </div>
     <!-- /.row -->

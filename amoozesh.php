@@ -348,7 +348,7 @@ char ** list = {"An", "exam", "on", "Halloween", "night!!!!"};
 
                         قسمت پنج : فایل استاندارد شامل تمام هدرفایل های (کتابخانه‌های) استاندارد می‌باشد.
                         مانند stdio، stdlib و ... </p>
-                    <a href="./quiz/1-q1.php">
+                    <a href="2-q1.php">
                         <div class="nextPage btnGreen" id="p6">آزمون</div>
                     </a>
                 </li>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['next'] = "2-e5.php";
-$_SESSION['current_q'] = "2-q5";
+$_SESSION['next'] = "2-e3.php";
+$_SESSION['current_q'] = "2-q3";
 $_SESSION['ans'] = -1;
 include('connection.php');
 if (empty($_SESSION['id'])) {
@@ -12,14 +12,13 @@ if (empty($_SESSION['id'])) {
     $sql = "INSERT INTO logs (id, url, start) VALUES ('" . $_SESSION['id'] . "','$url', '$t')";
 ///////////////// this is final page dont have next page////////////////////
 
-    if ($conn->query($sql) === false) {
+    if ($conn->query($sql) === true) {
         //echo "New record created successfully";
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        if (isset($_POST['ans'])) {
-//            header("location: 1-e5.php");
+        if (!isset($_POST['ans'])) {
+//            header("location: next.php");
         }
-
     }
     if (!$_SESSION['see_next']) {
         $t1 = time();
@@ -103,10 +102,8 @@ if (empty($_SESSION['id'])) {
     <!-- /.container -->
 </nav>
 
-
 <!-- Page Content -->
 <div class="container">
-
     <?php
 
     if (isset($_POST['ans'])) {
@@ -114,7 +111,7 @@ if (empty($_SESSION['id'])) {
 
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
-        } else if ($res == "2") {
+        } else if ($res == "4") {
             $sql = "UPDATE questions SET answer=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             $_SESSION['ans'] = 1;
@@ -151,27 +148,26 @@ if (empty($_SESSION['id'])) {
     <div class="row">
         <div class="col-lg-12 text-center">
           <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
-          <img src="img/5.png" alt="">
+          <img src="img/3.png" alt="">
           <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
             <form role="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input id="check" type="radio" name="optradio" value="1" style="margin-right: -18px;">2, 3</label>
+                    <label><input id="check" type="radio" name="optradio" value="1" style="margin-right: -18px;">Error: cannot convert from void** to int**</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">2, 0</label>
+                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">No output</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">2, Garbage value</label>
+                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">Garbage value</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">0, 0</label>
+                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">0</label>
                 </div>
                 <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
-                <!-- <a href="1-h5.php" class="btn btn-info" role="button"> پاسخ</a> -->
+                <a href="1-h3.php" class="btn btn-info" role="button"> راهنمایی</a>
                 <!-- <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
             </form>
-
 
         </div>
     </div>

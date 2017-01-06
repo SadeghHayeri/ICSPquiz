@@ -4,7 +4,7 @@ include('connection.php');
 if (empty($_SESSION['id'])) {
     header("location: index.php");
 } else {
-    $_SESSION['next'] = "1-q4.php";
+    $_SESSION['next'] = "2-q5.php";
 ///////////////////////
     $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $sql = "INSERT INTO logs (id, url) VALUES ('" . $_SESSION['id'] . "','$url')";
@@ -85,7 +85,6 @@ if (empty($_SESSION['id'])) {
     <!-- /.container -->
 </nav>
 
-
 <!-- Page Content -->
 <div class="container">
 
@@ -107,7 +106,6 @@ if (empty($_SESSION['id'])) {
     }
 
     ?>
-
 
     <div class="row">
       <div class="col-lg-7 img">
@@ -140,7 +138,7 @@ if (empty($_SESSION['id'])) {
                         <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
                     </div>
                     <input type="submit" class="btn btn-info" name="ans" value="سوال بعد">
-                    <input type="submit" class="btn btn-info" name="end" value="خاتمه آزمون">
+<!--                    <input type="submit" class="btn btn-info" name="end" value="خاتمه آزمون">-->
                 </form>
             </div>
         </div>

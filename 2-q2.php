@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['next'] = "2-e4.php";
-$_SESSION['current_q'] = "2-q4";
+$_SESSION['next'] = "2-e2.php";
+$_SESSION['current_q'] = "2-q2";
 $_SESSION['ans'] = -1;
 include('connection.php');
 if (empty($_SESSION['id'])) {
@@ -113,7 +113,7 @@ if (empty($_SESSION['id'])) {
 
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
-        } else if ($res == "1") {
+        } else if ($res == "3") {
             $sql = "UPDATE questions SET answer=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             $_SESSION['ans'] = 1;
@@ -150,27 +150,26 @@ if (empty($_SESSION['id'])) {
     <div class="row">
         <div class="col-lg-12 text-center">
           <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
-          <img src="img/4.png" alt="">
-          <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
+          <img src="img/2.png" alt="">
+            <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.58 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
             <form role="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input id="check" type="radio" name="optradio" value="1" style="margin-right: -18px;">JACK</label>
+                    <label><input id="check" type="radio" name="optradio" value="3" style="margin-right: -18px;">x=31, y=502, z=502</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">JAK</label>
+                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">x=31, y=500, z=500</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">JCK</label>
+                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">x=31, y=504, z=504</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">J65K</label>
+                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">x=31, y=498, z=498</label>
                 </div>
                 <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
-                <!-- <a href="1-h4.php" class="btn btn-info" role="button"> راهنمایی</a>
-                <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
+                <a href="2-h2.php" class="btn btn-info" role="button"> راهنمایی</a>
+                <!-- <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
             </form>
-
 
         </div>
     </div>

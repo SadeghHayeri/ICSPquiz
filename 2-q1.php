@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['next'] = "2-e2.php";
-$_SESSION['current_q'] = "2-q2";
+$_SESSION['next'] = "2-e1.php";
+$_SESSION['current_q'] = "2-q1";
 $_SESSION['ans'] = -1;
 include('connection.php');
 if (empty($_SESSION['id'])) {
@@ -9,8 +9,8 @@ if (empty($_SESSION['id'])) {
 } else {
     $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $t = date('Y-m-d H:i:s', time());
+    // this is final page dont have next page
     $sql = "INSERT INTO logs (id, url, start) VALUES ('" . $_SESSION['id'] . "','$url', '$t')";
-///////////////// this is final page dont have next page////////////////////
 
     if ($conn->query($sql) === true) {
         //echo "New record created successfully";
@@ -32,7 +32,7 @@ if (empty($_SESSION['id'])) {
 
     $sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('" . $_SESSION['id'] . "','" . $_SESSION['current_q'] . "', -1,1)";
     $conn->query($sql);
-    $sql = "SELECT * FROM questions WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
+    $sql = "SELECT * from questions where id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     if($row['answer'] != -1){
@@ -106,6 +106,7 @@ if (empty($_SESSION['id'])) {
 <!-- Page Content -->
 <div class="container">
 
+
     <?php
 
     if (isset($_POST['ans'])) {
@@ -113,62 +114,47 @@ if (empty($_SESSION['id'])) {
 
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
-        } else if ($res == "3") {
+        } else if ($res == "4") {
+            //$sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('".$_SESSION['id']."','".$_SESSION['current_q']."', 1,1)";
             $sql = "UPDATE questions SET answer=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             $_SESSION['ans'] = 1;
             header("location:" . $_SESSION['next'] . "");
         } else {
+            //$sql = "INSERT INTO questions (id, question, answer, visit) VALUES ('".$_SESSION['id']."','".$_SESSION['current_q']."', 0,1)";
             $sql = "UPDATE questions SET answer=0 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
             $_SESSION['ans'] = 0;
             header("location:" . $_SESSION['next'] . "");
-            /*
-            $sql = "SELECT reset from questions where id='".$_SESSION['id']."' and question='".$_SESSION['current_q']."'";
-            $result = $conn->query($sql);
-            $row = mysqli_fetch_assoc($result);
 
-            if($row['reset']!=0){
-              header( "location:".$_SESSION['next']."" );
-            }
-            else{
-              header("location: wrong.php");
-            }
-            */
-            //header("location: wrong.php");
-            /*if(!$_SESSION['reset']){
-              header("location: wrong.php");
-            }
-            else{
-              header( "location:".$_SESSION['next']."" );
-            }*/
         }
 
     }
 
     ?>
+
+
     <div class="row">
         <div class="col-lg-12 text-center">
-          <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
-          <img src="img/2.png" alt="">
-            <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.58 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
+            <p dir="rtl" style="text-align: justify;"><strong>سوال : </strong>خروجی قطعه کد زیر کدام است؟</p>
+            <img src="img/1-extra.png" alt="">
+            <!-- <p dir="rtl" style="text-align: justify;">با اجرای <img src="img/Screen Shot 2016-12-14 at 6.18.51 PM.png" alt=""> کدام یک از اتفاقات زیر رخ خواهد داد؟</p> -->
 
-            <form role="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
+            <form id="myForm" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="direction: rtl; text-align: right">
                 <div class="radio">
-                    <label><input id="check" type="radio" name="optradio" value="3" style="margin-right: -18px;">x=31, y=502, z=502</label>
+                    <label><input id="check" type="radio" name="optradio" value="1" style="margin-right: -18px;">3</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">x=31, y=500, z=500</label>
+                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">4</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="1" style="margin-right: -18px;">x=31, y=504, z=504</label>
+                    <label><input type="radio" name="optradio" value="3" style="margin-right: -18px;">123</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" value="2" style="margin-right: -18px;">x=31, y=498, z=498</label>
+                    <label><input type="radio" name="optradio" value="4" style="margin-right: -18px;">124</label>
                 </div>
                 <input type="submit" class="btn btn-info" name="ans" value="ارسال پاسخ">
-                <!-- <a href="1-h2.php" class="btn btn-info" role="button"> راهنمایی</a> -->
-                <!-- <a href="end_effort.php" class="btn btn-info" role="button"> خاتمه آزمون</a> -->
+                 <a href="2-h1.php" class="btn btn-info" role="button"> راهنمایی</a>
             </form>
 
         </div>

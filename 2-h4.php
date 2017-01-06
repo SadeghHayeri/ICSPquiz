@@ -4,22 +4,23 @@ include('connection.php');
 if (empty($_SESSION['id'])) {
     header("location: index.php");
 } else {
-    $_SESSION['next'] = "end_effort.php";
 ///////////////////////
     $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $sql = "INSERT INTO logs (id, url) VALUES ('" . $_SESSION['id'] . "','$url')";
 
-    if ($conn->query($sql) === true) {
+    if ($conn->query($sql) === TRUE) {
         //echo "New record created successfully";
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        if (!(isset($_POST['ans']) || isset($_POST['end']))) {
-            header("location: end_effort.php");
-        }
     }
 
     if (empty($_SESSION['current_q'])) {
         print("مسیر نا درست");
+    } else {
+        $sql = "UPDATE questions SET hint=1 WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
+        $conn->query($sql);
+        $sql2 = "DELETE FROM `logs` WHERE id='" . $_SESSION['id'] . "' and `url`='" . $_SESSION['previous'] . "'";
+        $conn->query($sql2);
     }
 }
 ?>
@@ -38,13 +39,22 @@ if (empty($_SESSION['id'])) {
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/stylePlus.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <style>
-        body {
-            padding-top: 70px;
-            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        }
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+    @media screen and (min-width: 480px) {
+      body {
+        background-image: url('./img/pic1.jpg');
+        background-size: 100%;
+        background-position: 0px -100px;
+        background-repeat: no-repeat;
+      }
+    }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -88,57 +98,48 @@ if (empty($_SESSION['id'])) {
 
 <!-- Page Content -->
 <div class="container">
-
     <?php
-    if (isset($_POST['ans']) || isset($_POST['end'])) {
-        $res = @trim($_POST['effortradio']);
+
+
+    if (isset($_POST['ans'])) {
+        $res = @trim($_POST['hintradio']);
+
         if ($res == "") {
             echo '<div style="text-align: center; color: red;">"لطفا یکی از گزینه ها را انتخاب نمایید"</div>';
         } else {
-            $sql = "UPDATE questions SET effort=$res  WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
+            $sql = "UPDATE questions SET hint_rate=$res  WHERE id='" . $_SESSION['id'] . "' and question='" . $_SESSION['current_q'] . "'";
             $conn->query($sql);
-            if (isset($_POST['end'])) {
-                header("location: end_effort.php");
-            } else {
-                header("location:" . $_SESSION['next'] . "");
-            }
-
+            $page = $_SESSION['current_q'] . ".php";
+            header("location:" . $page . "");
         }
     }
 
     ?>
-
     <div class="row">
-      <div class="col-lg-7 img">
-      </div>
-      <div class="col-lg-5 rtlPart">
+        <div class="col-lg-12 text-center">
             <div class="container">
-                <?php
-                if ($_SESSION['ans'] == 1) {
-                    print("پاسخ شما صحیح است.");
-                } else {
-                    //print("پاسخ شما نادرست است.");
-                    echo '<span dir="rtl" style="text-align: right;">پاسخ شما نادرست است.</span>';
-                }
-                ?>
-                <p dir="rtl" style="text-align: justify;">برای پاسخگویی به این سوال چه میزان تلاش نموده اید</p>
+                <p dir="rtl" style="text-align: justify;"><strong>"راهنمایی":</strong>به جنس متغیر ptr1 و عناصری که برای initial کردن آن استفاده میشوند, دقت کنید :)</p>
+
+                <p dir="rtl" style="text-align: justify;">این میزان راهنمایی تا چه حد برای شما مفید بود؟</p>
+
+
                 <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <div class="radio">
-                        <label><input type="radio" name="effortradio" value="1">خیلی کم</label>
+                        <label><input type="radio" name="hintradio" value="1">خیلی کم</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="effortradio" value="2">کم</label>
+                        <label><input type="radio" name="hintradio" value="2">کم</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="effortradio" value="3">متوسط</label>
+                        <label><input type="radio" name="hintradio" value="3">متوسط</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="effortradio" value="4">زیاد</label>
+                        <label><input type="radio" name="hintradio" value="4">زیاد</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="effortradio" value="5">خیلی زیاد</label>
+                        <label><input type="radio" name="hintradio" value="5">خیلی زیاد</label>
                     </div>
-                    <input type="submit" class="btn btn-info" name="ans" value="ارزیابی">
+                    <input type="submit" class="btn btn-info" name="ans" value="بازگشت به سوال">
                 </form>
             </div>
         </div>
