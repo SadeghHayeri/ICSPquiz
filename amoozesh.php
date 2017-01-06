@@ -55,21 +55,21 @@ if (empty($_SESSION['id'])) {
             <li>
                 اشاره‌گر
                 <ul>
-                    <li id="poDef">تعریف</li>
-                    <li id="poOp">عملگر اشاره‌گر و رفرنس</li>
-                    <li id="poNul">اشاره‌گر به Null</li>
+                    <li id="poDef" class="c0 active">تعریف</li>
+                    <li id="poOp" class="c1">عملگر اشاره‌گر و رفرنس</li>
+                    <li id="poNul" class="c2">اشاره‌گر به Null</li>
                 </ul>
             </li>
 
             <li>
                 آرایه‌ها
                 <ul>
-                    <li id="ArDef">تعریف</li>
-                    <li id="Macro">ماکرو‌ها و پارامتر‌ها</li>
+                    <li id="ArDef" class="c3">تعریف</li>
+                    <li id="Macro" class="c4">ماکرو‌ها و پارامتر‌ها</li>
                 </ul>
             </li>
 
-            <li id="Ans">
+            <li id="Ans" class="c5">
                 آزمون و تحلیل سوالات
             </li>
 
@@ -365,12 +365,15 @@ char ** list = {"An", "exam", "on", "Halloween", "night!!!!"};
                     animateHeight: true,
                 });
 
-                // slider.on('unslider.change', function(event, index, slide) {
-                //     $('.c' + activeIndex).removeClass('active');
-                //     activeIndex = (index!=-1)?index:6;
-                //     // alert(index + " " + activeIndex);
-                //     $('.c' + activeIndex).addClass('active');
-                // });
+                var activeIndex = 0;
+                slider.on('unslider.change', function(event, index, slide) {
+                    $('.c' + activeIndex).removeClass('active');
+                    activeIndex = (index!=-1)?index:5;
+                    // alert(index + " " + activeIndex);
+                    $('.c' + activeIndex).addClass('active');
+                });
+
+
 
                 $('.nextPage').click(function () {
                     $('html, body').animate({

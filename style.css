@@ -175,3 +175,7 @@ body {
 .btnGreen:hover {
   background-color: rgb(0, 159, 40);
 }
+
+.active {
+  color: red !important;
+}
