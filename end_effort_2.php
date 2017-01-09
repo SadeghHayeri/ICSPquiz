@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['next'] = "logout_page.php";
+$_SESSION['next'] = "questionar.php";
 $_SESSION['current_q'] = "end_effort_2";
 
 include('connection.php');
@@ -45,8 +45,8 @@ if (empty($_SESSION['id'])) {
     <title>CECM94</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/stylePlus.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylePlus.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
