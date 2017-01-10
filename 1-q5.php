@@ -186,12 +186,14 @@ if (empty($_SESSION['id'])) {
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script>
-  $(document).ready( function() {
+$(document).ready( function() {
+  setTimeout(function () {
+    $('#check').prop("checked", true)
     setTimeout(function () {
-      $('#check').prop("checked", true)
       $('#myForm').submit();
-    }, 1000 * 60 * 3);
-  });
+    }, 100);
+  }, 1000 * 60 * 3);
+});
 </script>
 
 </body>

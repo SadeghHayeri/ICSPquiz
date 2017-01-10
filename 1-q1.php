@@ -176,7 +176,9 @@ if (empty($_SESSION['id'])) {
   $(document).ready( function() {
     setTimeout(function () {
       $('#check').prop("checked", true)
-      $('#myForm').submit();
+      setTimeout(function () {
+        $('#myForm').submit();
+      }, 100);
     }, 1000 * 60 * 3);
   });
 </script>
